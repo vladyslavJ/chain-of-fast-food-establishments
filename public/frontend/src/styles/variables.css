@@ -1,3 +1,16 @@
 :root {
+  --mainBackground: #f4f4f4;
+  --secondaryBackground: #ffffff;
+
   --primaryColor: rgba(236, 187, 64, 0.9);
+  --primaryColorHov: rgba(255, 204, 76, 0.9);
+
+  --textColor: #222;
+  --secondaryTextColor: #666;
+  --mainPadding: 30px 100px;
+
+  --maxWidth: 1200px;
+  --textSize: 1.1rem;
+  --heading1Size: 3rem;
+  --heading2Size: 3rem;
 }

@@ -4,6 +4,18 @@
 }
 
 body {
-  background-color: pink;
+  background-color: var(--mainBackground);
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.heading {
+  font-weight: bold;
+  color: var(--textColor);
+}
+
+.paragraph {
+  line-height: 1.5;
+  text-align: justify;
+  font-size: var(--textSize);
+  color: var(--textColor);
 }
