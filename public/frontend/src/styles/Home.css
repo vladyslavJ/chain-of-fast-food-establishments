@@ -1,4 +1,4 @@
-.main__container {
+.home__container {
   max-width: var(--maxWidth);
   margin: 0 auto;
   padding: var(--mainPadding);
@@ -12,7 +12,9 @@
 .info-card {
   display: flex;
   justify-content: space-between;
+  /*  */
   margin: 50px 0;
+  /*  */
   background-color: var(--secondaryBackground);
   border-radius: 20px;
   overflow: hidden;

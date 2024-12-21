@@ -6,7 +6,7 @@ import locations from '../assets/locations.jpg';
 import burger from '../assets/temp/burger.png';
 import chickenRoll from '../assets/temp/chicken-roll.png';
 import nuggets from '../assets/temp/nuggets.png';
-import potato from '../assets/temp/potato.png'
+import potato from '../assets/temp/potato.png';
 
 import InfoCard from '../components/InfoCard';
 import MenuItemC from '../components/MenuItemC';
@@ -96,7 +96,7 @@ const Home = () => {
   };
 
   return (
-    <div className="main__container">
+    <div className="home__container">
       <InfoCard card={cards[0]} size="big" isReversed={false} />
       <InfoCard card={cards[1]} size="small" isReversed={false} />
       <InfoCard card={cards[2]} size="small" isReversed={false} />
