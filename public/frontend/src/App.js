@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // redirect,
+} from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
@@ -14,6 +18,7 @@ import NotFound from './pages/NotFound';
 import burger from './assets/temp/burger.png';
 import chickenRoll from './assets/temp/chicken-roll.png';
 import nuggets from './assets/temp/nuggets.png';
+
 const menuData = [
   {
     id: 1,
@@ -23,7 +28,7 @@ const menuData = [
     alt: 'Шаурма',
     categoryId: [1, 2],
     description: 'Соковита шаурма з куркою та овочами.',
-    weight: '250г',
+    weight: '250 г',
     calories: 400,
     proteins: 25,
     fats: 10,
@@ -38,7 +43,7 @@ const menuData = [
     alt: 'Бургер',
     categoryId: [1, 2],
     description: 'Апетитний бургер із соковитою котлетою та овочами.',
-    weight: '200г',
+    weight: '200 г',
     calories: 350,
     proteins: 20,
     fats: 15,
@@ -53,7 +58,7 @@ const menuData = [
     alt: 'Нагетси',
     categoryId: [1, 3],
     description: 'Хрусткі курячі нагетси.',
-    weight: '150г',
+    weight: '150 г',
     calories: 300,
     proteins: 15,
     fats: 18,
@@ -74,7 +79,12 @@ const router = createBrowserRouter([
         Component: MenuItem,
         loader: async ({ params }) => {
           const { itemId } = params;
-          const data = menuData.find((item) => item.id === itemId);
+          const data = menuData.find((item) => item.id === Number(itemId));
+
+          // if (!data) {
+          //   throw redirect('/not-found');
+          // }
+
           return data;
         },
       },

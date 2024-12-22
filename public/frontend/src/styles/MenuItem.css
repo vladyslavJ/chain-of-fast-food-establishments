@@ -1,12 +1,78 @@
-.menu-item__container{
+.menu-item__container {
   max-width: var(--maxWidth);
   margin: 0 auto;
   padding: var(--mainPadding);
 }
 
-.menu-item__inner-container{
-  width: 100%;
+.menu-item__inner-container {
+  box-sizing: border-box;
   background-color: var(--secondaryBackground);
-  border-radius: 40px;
+  border-radius: 16px;
   box-shadow: 3px 3px 30px -10px #999;
+  padding: 30px;
+}
+
+.menu-item__main-info {
+  width: 100%;
+  display: flex;
+  margin: 0 0 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item__main-info-content {
+  width: 40%;
+}
+
+.menu-item__heading {
+  font-size: var(--heading1Size);
+  margin-bottom: 5px;
+}
+
+.menu-item__nutritional-value {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.menu-item__description {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.menu-item__price {
+  font-size: 2rem;
+}
+
+.menu-item__button {
+  border: none;
+  width: 14rem;
+  font-size: var(--textSize);
+  background-color: var(--primaryColor);
+  box-shadow: 3px 3px 20px -4px #999;
+  cursor: pointer;
+  margin: 8px 0;
+  padding: 0.8125rem 0;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+}
+
+.menu-item__button:hover {
+  background-color: var(--primaryColorHov);
+}
+
+.menu-item__image {
+  width: 55%;
+}
+
+.menu-item__details {
+  margin: 20px 0 0 0;
+}
+
+.menu-item__details-nutritional-value {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.menu-item__ingredients {
+  font-size: 1.2rem;
 }

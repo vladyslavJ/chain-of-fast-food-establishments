@@ -56,6 +56,7 @@ const Home = () => {
       price: 120,
       src: chickenRoll,
       alt: 'Шаурма',
+      categoryId: [1, 2],
     },
     {
       id: 2,
@@ -63,6 +64,7 @@ const Home = () => {
       price: 70,
       src: burger,
       alt: 'Бургер',
+      categoryId: [1, 2],
     },
     {
       id: 3,
@@ -70,6 +72,7 @@ const Home = () => {
       price: 90,
       src: nuggets,
       alt: 'Нагетси',
+      categoryId: [1, 3],
     },
     {
       id: 4,
@@ -77,6 +80,7 @@ const Home = () => {
       price: 60,
       src: potato,
       alt: 'Картопля',
+      categoryId: [1, 4],
     },
   ]);
 
