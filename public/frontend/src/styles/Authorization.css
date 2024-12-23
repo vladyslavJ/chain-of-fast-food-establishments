@@ -1,0 +1,22 @@
+.authorization__container {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: var(--mainPadding);
+
+  /*  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  /*  */
+}
+
+.autorization__heading {
+  font-size: var(--heading1Size);
+}
+
+.authorization__paragraph {
+  margin-top: 20px;
+  font-size: 1.3rem;
+}

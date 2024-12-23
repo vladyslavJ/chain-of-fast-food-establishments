@@ -1,0 +1,28 @@
+.hygiene__container {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: var(--mainPadding);
+}
+
+.hygiene__title {
+  box-sizing: border-box;
+  background-color: var(--secondaryBackground);
+  border-radius: 1rem;
+  padding: 30px;
+}
+
+.hygiene__heading {
+  font-size: var(--heading1Size);
+}
+
+.hygiene__title-paragraph {
+  margin-top: 30px;
+}
+
+.hygiene__info-block {
+  margin-top: 80px;
+}
+
+.hygiene__info-block:first-child {
+  margin-top: 0;
+}

@@ -1,0 +1,13 @@
+.locations__container{
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: var(--mainPadding);
+}
+
+.locations__inner-container{
+  box-sizing: border-box;
+  background-color: var(--secondaryBackground);
+  border-radius: 16px;
+  box-shadow: 3px 3px 30px -10px #999;
+  padding: 30px;
+}

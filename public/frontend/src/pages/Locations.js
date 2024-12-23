@@ -1,5 +1,13 @@
+import '../styles/Locations.css';
+
 const Locations = () => {
-  return <h1>Locations</h1>;
+  return (
+    <div className="locations__container">
+      <section className="locations__inner-container">
+        <h1>Locations</h1>
+      </section>
+    </div>
+  );
 };
 
 export default Locations;

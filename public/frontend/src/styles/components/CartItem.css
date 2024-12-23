@@ -84,6 +84,7 @@
   background-color: #ff3c4285;
   border-radius: 0.625rem;
   transition: all 0.4s;
+  box-shadow: 2px 2px 20px -4px #999;
 }
 
 .cart-item__remove-button:hover {
