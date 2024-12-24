@@ -10,4 +10,16 @@
   border-radius: 16px;
   box-shadow: 3px 3px 30px -10px #999;
   padding: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.locations__input-block{
+  width: 100%;
+}
+
+.locations__restaurant-info{
+  width: 40%;
 }

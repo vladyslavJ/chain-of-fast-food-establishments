@@ -1,0 +1,30 @@
+/* needs to remove */
+
+.custom-arrow {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 2rem;
+  z-index: 10;
+  position: absolute;
+  
+}
+
+.custom-arrow--next {
+  /* position: absolute; */
+  top: 50%;
+  transform: translateY(-50%);
+  /* z-index: 10; */
+  visibility: visible;  /* Переконайтесь, що кнопка видима */
+}
+
+.custom-arrow--prev {
+  /* position: absolute; */
+  top: 50%;
+  transform: translateY(-50%);
+  /* z-index: 10; */
+  visibility: visible;  /* Переконайтесь, що кнопка видима */
+}
