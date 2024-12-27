@@ -1,8 +1,7 @@
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import '../styles/components/MenuItemC.css';
 import { useCart } from '../context/CartContext';
-// (1) font-size for price is not overriding(.paragraph .menu-item__price)
+import '../styles/components/MenuItemC.css';
 
 const MenuItemC = (props) => {
   const { addToCart } = useCart();

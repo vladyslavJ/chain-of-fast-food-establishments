@@ -6,9 +6,9 @@ import potato from '../assets/temp/potato.png';
 import burgerCategory from '../assets/temp/burger-category.png';
 import potatoCategory from '../assets/temp/potato-category.png';
 
-import '../styles/Menu.css';
 import MenuItemC from '../components/MenuItemC';
 import CategoryItem from '../components/CategoryItem';
+import '../styles/Menu.css';
 
 const Menu = () => {
   // , setMenuItems
@@ -177,7 +177,7 @@ const Menu = () => {
         {menuByCategories.map((menuItem) => (
           <MenuItemC
             key={menuItem.id}
-            classN="menu__menu-item"
+            className="menu__menu-item"
             item={menuItem}
             isPrimary={false}
           />

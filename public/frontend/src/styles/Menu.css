@@ -29,15 +29,9 @@
 
 .menu__menu-items {
   width: 100%;
-  /* display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  align-items: center;
-  justify-content: flex-start; */
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* background-color: red; */
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .menu__menu-item {
