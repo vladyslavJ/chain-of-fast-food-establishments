@@ -1,0 +1,137 @@
+.locations__container {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: var(--mainPadding);
+}
+
+.locations__inner-container {
+  box-sizing: border-box;
+  background-color: var(--secondaryBackground);
+  border-radius: 16px;
+  box-shadow: 3px 3px 30px -10px #999;
+  padding: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.locations__search {
+  width: 46%;
+  position: relative;
+}
+
+.locations__input {
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid var(--textColor);
+  outline: none;
+  color: var(--textColor);
+  font-size: 1.2rem;
+  padding: 7px 75px 7px 0;
+}
+
+.locations__input-func {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.locations__clear-input {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 2px;
+  transition: opacity 0.4s;
+}
+
+.locations__clear-input--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.locations__search-button {
+  background-color: transparent;
+  border: none;
+  padding: 3px;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  color: var(--textColor);
+  cursor: pointer;
+}
+
+.locations__search-button-icon {
+  display: block;
+}
+
+.locations__locations {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
+  max-height: 300px;
+
+  overflow-y: auto;
+  overscroll-behavior: none;
+}
+
+.locations__locations-list {
+  padding: 10px;
+}
+
+.locations__locations-item {
+  background-color: var(--primaryColor);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 20px -6px #999;
+  transition: all 0.5s;
+}
+
+.locations__locations-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.locations__locations-item:hover {
+  background-color: var(--primaryColorHov);
+}
+
+.locations__locations-icon {
+  color: var(--textColor);
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.locations__locations-icon-content {
+  display: block;
+}
+
+/* .locations__locations-item-adress {
+} */
+
+.locations__locations-item-adress-name {
+  color: var(--secondaryTextColor);
+}
+
+.locations__map {
+  width: 100%;
+  height: clamp(200px, 80vh, 580px);
+  margin-top: 8px;
+}
+
+.locations__map--small {
+  width: 55%;
+  height: 580px;
+}
+
+.locations__restaurant-info {
+  width: 40%;
+}

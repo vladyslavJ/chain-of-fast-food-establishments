@@ -1,0 +1,24 @@
+.custom-arrow {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--textColor);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.4s;
+}
+
+.custom-arrow--primary {
+  background-color: #fcec9b;
+}
+
+.custom-arrow--primary:hover {
+  background-color: #eddd91;
+}
+
+.custom-arrow__icon {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,13 @@
+.about__container{
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: var(--mainPadding);
+}
+
+.about__info-block{
+  margin-bottom: 80px;
+}
+
+.about__info-block:last-child{
+  margin-bottom: 0;
+}

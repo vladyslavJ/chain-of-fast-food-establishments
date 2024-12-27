@@ -1,0 +1,41 @@
+.category-item {
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+  background-color: #aaa;
+  box-shadow: 3px 3px 30px -10px #999;
+  padding: 5px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.category-item:hover {
+  background-color: #c0c0c0;
+}
+
+.category-item--active {
+  background-color: var(--primaryColor);
+}
+
+.category-item--active:hover {
+  background-color: var(--primaryColorHov);
+}
+
+.category-item__image {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+}
+
+.category-item__title {
+  font-size: 1.2rem;
+  line-height: 1.1;
+  text-align: center;
+}

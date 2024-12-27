@@ -1,0 +1,39 @@
+.menu__container {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: var(--mainPadding);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu__heading {
+  margin: 10px 0 0 0;
+  font-size: var(--heading1Size);
+}
+
+.menu__categories {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.menu__category {
+  margin: 10px;
+}
+
+.menu__menu-items {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.menu__menu-item {
+  margin: 15px auto;
+}

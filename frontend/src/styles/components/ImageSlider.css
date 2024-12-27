@@ -1,0 +1,35 @@
+.image-slider {
+  width: 100%;
+  position: relative;
+}
+
+.image-slider__swiper {
+  width: 100%;
+}
+
+.image-slider__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-slider__swiper-image {
+  width: 80%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.image-slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.image-slider__arrow--prev {
+  left: 1%;
+}
+
+.image-slider__arrow--next {
+  right: 1%;
+}
