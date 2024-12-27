@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
 import RestaurauntInfo from '../components/RestaurantInfo';
 import '../styles/Locations.css';
 
@@ -112,7 +112,7 @@ const locations = [
 
 const Locations = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [isFocused, setIsFocused] = useState(false); // is need?
+  const [isFocused, setIsFocused] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const defaultMapUrl =
@@ -121,13 +121,15 @@ const Locations = () => {
   const filteredLocations = locations.filter(
     (loc) =>
       loc.id.toString().includes(searchTerm) ||
-      loc.adress.toLowerCase().includes(searchTerm.toLowerCase())
+      loc.adress.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      searchTerm.toLowerCase().includes(loc.adress.toLowerCase()) ||
+      searchTerm.includes(`№${loc.id}`)
   );
 
   return (
     <div className="locations__container">
       <section className="locations__inner-container">
-        <div className="locations__input-block">
+        <div className="locations__search">
           <input
             type="text"
             className="locations__input"
@@ -135,38 +137,57 @@ const Locations = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onFocus={() => setIsFocused(true)}
-            //onBlur={() => (!searchTerm ? setIsFocused(false) : null)} // isWhiteSpace //
+            onBlur={() => (!searchTerm ? setIsFocused(false) : null)}
           />
-          <span
-            className="locations__clear-input"
-            onClick={() => {
-              setSearchTerm('');
-              setSelectedLocation(null);
-            }}
-          >
-            x
-          </span>
-          <button className="locations__search-button">Search</button>
+          <div className="locations__input-func">
+            <span
+              className={`locations__clear-input ${
+                searchTerm ? '' : 'locations__clear-input--hidden'
+              }`}
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedLocation(null);
+              }}
+            >
+              &#10005;
+            </span>
+
+            <button
+              className="locations__search-button"
+              onClick={() =>
+                setSelectedLocation(
+                  locations.find(
+                    (loc) =>
+                      searchTerm
+                        .toLowerCase()
+                        .includes(loc.adress.toLowerCase()) ||
+                      searchTerm.includes(`№${loc.id}`)
+                  )
+                )
+              }
+            >
+              <FaSearch className="locations__search-button-icon" />
+            </button>
+          </div>
           {isFocused && (
-            <div className="locations__dropdown-container">
-              <ul className="locations__dropdown-list">
+            <div className="locations__locations">
+              <ul className="locations__locations-list">
                 {filteredLocations.map((loc) => (
                   <li
                     key={loc.id}
-                    className="locations__item"
-                    style={{ display: 'flex' }}
-                    onClick={() => {
+                    className="locations__locations-item"
+                    onMouseDown={() => {
                       setSelectedLocation(loc);
-                      setSearchTerm(`${loc.adress}. Ситень №${loc.id}`);
+                      setSearchTerm(`${loc.adress}. №${loc.id}`);
+                      setIsFocused(false);
                     }}
                   >
-                    {/* style */}
-                    <div className="locations__image">
-                      <FaMapMarkerAlt className="locations__image-icon" />
+                    <div className="locations__locations-icon">
+                      <FaMapMarkerAlt className="locations__locations-icon-content" />
                     </div>
-                    <p className="locations__item-adress paragraph">
+                    <p className="locations__locations-item-adress paragraph">
                       {loc.adress} <br />{' '}
-                      <span className="locations__item-adress-name">
+                      <span className="locations__locations-item-adress-name">
                         Ситень №{loc.id}
                       </span>
                     </p>
@@ -185,10 +206,11 @@ const Locations = () => {
           }
           title="Google Map"
           frameborder="0"
-          width="600px"
-          height="400px"
-          className="locations__map"
-          style={{ width: '55%' }}
+          width="200px"
+          height="200px"
+          className={`locations__map ${
+            selectedLocation ? 'locations__map--small' : ''
+          }`}
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"

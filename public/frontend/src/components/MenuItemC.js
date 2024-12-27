@@ -9,7 +9,7 @@ const MenuItemC = (props) => {
 
   return (
     <article
-      className={`${props.classN ? props.classN + ' ' : ''}menu-item-c ${
+      className={`${props.className ? props.className + ' ' : ''}menu-item-c ${
         props.isPrimary ? 'menu-item-c--primary' : ''
       }`}
     >

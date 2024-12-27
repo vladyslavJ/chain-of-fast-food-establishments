@@ -14,7 +14,9 @@ const RestaurauntInfo = (props) => {
   ];
 
   return (
-    <article className="restaurant-info">
+    <article
+      className={`${props.className ? props.className : ''} restaurant-info`}
+    >
       <ImageSlider
         className="restaurant-info__slider"
         images={props.location.images}

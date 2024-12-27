@@ -3,14 +3,16 @@ import about from '../assets/about.jpg';
 import login from '../assets/login.jpg';
 import hungry from '../assets/hungry.jpg';
 import locations from '../assets/locations.jpg';
+
+import InfoCard from '../components/InfoCard';
+import Carousel from '../components/Carousel';
+import MenuItemC from '../components/MenuItemC';
+import '../styles/Home.css';
+
 import burger from '../assets/temp/burger.png';
 import chickenRoll from '../assets/temp/chicken-roll.png';
 import nuggets from '../assets/temp/nuggets.png';
 import potato from '../assets/temp/potato.png';
-
-import InfoCard from '../components/InfoCard';
-import MenuItemC from '../components/MenuItemC';
-import '../styles/Home.css';
 
 const cards = [
   {
@@ -110,7 +112,14 @@ const Home = () => {
           <span className="home_popular-heading-entity">&#9825;</span> В топі
           серед клієнтів за минулий тиждень
         </h2>
-        <div className="home__popular-carousel">
+
+        <Carousel className="home__popular-carousel">
+          {menuItems.map((_item) => (
+            <MenuItemC key={_item.id} className='home__popular-item' item={_item} isPrimary={true} />
+          ))}
+        </Carousel>
+
+        {/* <div className="home__popular-carousel">
           <button className="home__popular-button arrow" onClick={prevItem}>
             &#8249;
           </button>
@@ -136,7 +145,7 @@ const Home = () => {
           <button className="home__popular-button arrow" onClick={nextItem}>
             &#8250;
           </button>
-        </div>
+        </div> */}
       </section>
 
       <InfoCard card={cards[3]} size="big" isReversed={true} />

@@ -1,14 +1,18 @@
 import '../styles/components/CustomArrow.css';
-
-// needs to remove
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
 const CustomArrow = (props) => {
   return (
     <button
-      className={`${props.className} custom-arrow custom-arrow--${props.arrowType}`}
-      onClick={props.onClick}
+      className={`${props.className} custom-arrow custom-arrow--${
+        props.arrowType
+      } ${props.isPrimary ? 'custom-arrow--primary' : ''}`}
     >
-      {props.arrowType === 'next' ? '&gt;' : '&lt;'}
+      {props.arrowType === 'next' ? (
+        <FaAngleRight className="custom-arrow__icon" />
+      ) : (
+        <FaAngleLeft className="custom-arrow__icon" />
+      )}
     </button>
   );
 };

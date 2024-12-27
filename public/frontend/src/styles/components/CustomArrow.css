@@ -1,30 +1,24 @@
-/* needs to remove */
-
 .custom-arrow {
   border: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--textColor);
   width: 40px;
   height: 40px;
   border-radius: 50%;
   font-size: 2rem;
-  z-index: 10;
-  position: absolute;
-  
+  transition: all 0.4s;
 }
 
-.custom-arrow--next {
-  /* position: absolute; */
-  top: 50%;
-  transform: translateY(-50%);
-  /* z-index: 10; */
-  visibility: visible;  /* Переконайтесь, що кнопка видима */
+.custom-arrow--primary {
+  background-color: #fcec9b;
 }
 
-.custom-arrow--prev {
-  /* position: absolute; */
-  top: 50%;
-  transform: translateY(-50%);
-  /* z-index: 10; */
-  visibility: visible;  /* Переконайтесь, що кнопка видима */
+.custom-arrow--primary:hover {
+  background-color: #eddd91;
+}
+
+.custom-arrow__icon {
+  display: block;
+  margin: 0 auto;
 }

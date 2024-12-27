@@ -1,8 +1,12 @@
 .restaurant-info {
-  width: 40%;
+  /* width: 40%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .restaurant-info__slider {
+  margin-bottom: 10px;
 }
 
 .restaurant-info__heading {
@@ -13,9 +17,11 @@
 
 .restaurant-info__heading-number {
   color: #777;
+  line-height: 1.5;
 }
 
 .restaurant-info__content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }

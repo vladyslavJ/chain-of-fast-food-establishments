@@ -1,34 +1,35 @@
-/* Needs to be redone */
-
-.image-slider{
+.image-slider {
   width: 100%;
-  background-color: pink;
   position: relative;
 }
 
-.image-slider__item{
-  display: flex !important;
+.image-slider__swiper {
+  width: 100%;
+}
+
+.image-slider__item {
+  display: flex;
   justify-content: center;
   align-items: center;
-  outline: none; 
 }
 
-.image-slider .slick-arrow{
-  width: 30%;
-  z-index: 2;
-}
-
-.image-slider .slick-arrow::before{
-  /* display: none; */
-  background-color: red;
-}
-
-.image-slider__item-image{
-  width: 70%;
-  display: block;
-  margin: 0 auto;
+.image-slider__swiper-image {
+  width: 80%;
   height: 200px;
-  
-  /* max-height: 400px; */
   object-fit: contain;
+}
+
+.image-slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.image-slider__arrow--prev {
+  left: 1%;
+}
+
+.image-slider__arrow--next {
+  right: 1%;
 }

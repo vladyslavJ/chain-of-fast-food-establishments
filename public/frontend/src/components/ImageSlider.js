@@ -1,35 +1,46 @@
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import '../styles/components/ImageSlider.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import CustomArrow from './CustomArrow';
-
-// needs to remove
+import '../styles/components/ImageSlider.css';
 
 const ImageSlider = (props) => {
-  const settings = {
-    lazyLoad: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrov: <CustomArrow className="image-slider__arrow" arrowType="prev" />,
-    nextArrow: <CustomArrow className="image-slider__arrow" arrowType="next" />,
-  };
-
   return (
-    <div className={`${props.className ? props.className + ' ' : ''}image-slider`}>
-      <Slider {...settings}>
+    <div
+      className={`${props.className ? props.className + ' ' : ''}image-slider`}
+    >
+      <Swiper
+        className="image-slider__swiper"
+        modules={[Navigation, Keyboard]}
+        navigation={{
+          prevEl: '.image-slider__arrow--prev',
+          nextEl: '.image-slider__arrow--next',
+        }}
+        keyboard={{ enabled: true }}
+        loop={true}
+        slidesPerView={1}
+      >
         {props.images.map((image, index) => (
-          <div key={index} className="image-slider__item">
+          <SwiperSlide className="image-slider__item" key={index}>
             <img
               src={image.src}
               alt={image.alt}
-              className="image-slider__item-image"
+              className="image-slider__swiper-image"
             />
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
+      <CustomArrow
+        className="image-slider__arrow image-slider__arrow--prev"
+        arrowType="prev"
+        isPrimary={true}
+      />
+      <CustomArrow
+        className="image-slider__arrow image-slider__arrow--next"
+        arrowType="next"
+        isPrimary={true}
+      />
     </div>
   );
 };

@@ -20,7 +20,7 @@
 .not-found__paragraph {
   font-size: 1.3rem;
   text-align: center;
-  color: #777;
+  color: var(--secondaryTextColor);
 }
 
 .not-found__paragraph-main-info {
